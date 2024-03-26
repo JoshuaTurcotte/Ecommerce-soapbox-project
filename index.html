@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Box Company</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="index.html" class="logo">The Box Company</a>
+            <div id="loginBanner">
+                <a href="login.html">Login</a> | 
+                <a href="acctCreation.html">Create Account</a> | 
+                <a href="#" id="cartLink">Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Discover Your Perfect Box</h1>
+            <p>Explore our premium selection of boxes for all occasions.</p>
+            <a href="catalogue.php" class="btn btn-primary">Shop Now</a>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured">
+            <h2>Featured Boxes</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="path/to/box-image.jpg" alt="Box Name">
+                    <h3>Box Name</h3>
+                    <p>Description of this amazing box.</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                <!-- Repeat for other featured products -->
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"Absolutely love my new box! The quality is unmatched." - Alex</p>
+            </div>
+            <div class="testimonial">
+                <p>"Fantastic selection and speedy delivery. Highly recommend." - Jamie</p>
+            </div>
+            <!-- More testimonials -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 The Box Company</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLoggedIn = false; //should be dynamically set based on actual login status
+            const cartLink = document.getElementById('cartLink');
+            if (userLoggedIn) {
+                cartLink.href = 'shoppingCart.html';
+            } else {
+                cartLink.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+</html>

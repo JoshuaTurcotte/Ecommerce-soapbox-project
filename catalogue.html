@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - The Box Company</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="index.html" class="logo">The Box Company</a>
+            <div id="loginBanner">
+                <a href="login.html">Login</a> | 
+                <a href="acctCreation.html">Create Account</a> | 
+                <a href="#" id="cartLink">Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Newly Released Boxes -->
+        <section class="boxes">
+            <h2>Newly Released Boxes</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="path/to/box-image.jpg" alt="Box Name 1">
+                    <h3>Box Name 1</h3>
+                    <p>Description of this amazing box.</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                <!-- Repeat for other newly released boxes -->
+            </div>
+        </section>
+
+        <!-- Popular Among Users -->
+        <section class="boxes">
+            <h2>Popular Among Users</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="path/to/box-image.jpg" alt="Box Name 2">
+                    <h3>Box Name 2</h3>
+                    <p>Description of this popular box.</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                <!-- Repeat for other popular boxes -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 The Box Company</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLoggedIn = false; //should be dynamically set based on actual login status
+            const cartLink = document.getElementById('cartLink');
+            if (userLoggedIn) {
+                cartLink.href = 'shoppingCart.html';
+            } else {
+                cartLink.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+</html>
